@@ -6,4 +6,4 @@ Resources:
         Name: "lambda-java"
         Alias: "live"
         CurrentVersion: "2"
-        TargetVersion: "3"
+        TargetVersion: "2"
