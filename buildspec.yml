@@ -18,7 +18,7 @@ phases:
 
 artifacts:
   files:
-    - deployment.zip
+  #  - deployment.zip
     - appspec.yml
   #  - scripts/**/*
   base-directory: output
