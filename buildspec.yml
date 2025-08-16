@@ -15,7 +15,7 @@ phases:
       - rm -rf lambda-java-1.0.0.jar
       - zip -r lambda-java-1.0.0.zip ./*
       - cd ..
-      - cp output/lambda-java-1.0.0 .
+      - cp output/lambda-java-1.0.0.zip .
 
 artifacts:
   files:
@@ -23,4 +23,4 @@ artifacts:
     - lambda-java-1.0.0.zip
     - appspec.yml
   #  - scripts/**/*
-  base-directory: output
+#  base-directory: output
