@@ -8,19 +8,19 @@ phases:
     commands:
       - echo "Compiling Lambda..."
       - mvn clean package
-      - cp target/lambda-java-1.0.0.jar .
-    #  - mkdir -p output
-    #  - cp target/lambda-java-1.0.0.jar output/
-    #  - cd output
-    #  - zip -r deployment.zip lambda-java-1.0.0.jar
-    #  - cd ..
-    #  - cp appspec.yml output/
-    #  - cp -r scripts output/
+      - mkdir -p output
+      - cp target/lambda-java-1.0.0.jar output/
+      - cd output
+      - jar xvf lambda-java-1.0.0.jar
+      - rm -rf lambda-java-1.0.0.jar
+      - zip -r lambda-java-1.0.0.zip ./*
+      - cd ..
+      - cp output/lambda-java-1.0.0 .
 
 artifacts:
   files:
   #  - deployment.zip
-    - lambda-java-1.0.0.jar
+    - lambda-java-1.0.0.zip
     - appspec.yml
   #  - scripts/**/*
-  #base-directory: output
+  base-directory: output
