@@ -11,7 +11,7 @@ phases:
       - mkdir -p output
       - cp target/lambda-java-1.0.0.jar output/application.jar
       - cp appspec.yml output/
-      - cp -r scripts output/
+    #  - cp -r scripts output/
 
 artifacts:
   files:
