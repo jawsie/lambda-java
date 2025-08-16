@@ -8,6 +8,7 @@ phases:
     commands:
       - echo "Compiling Lambda..."
       - mvn clean package
+      - cp target/lambda-java-1.0.0.jar .
     #  - mkdir -p output
     #  - cp target/lambda-java-1.0.0.jar output/
     #  - cd output
