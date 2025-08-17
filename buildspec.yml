@@ -16,7 +16,8 @@ phases:
       - zip -r lambda-java-1.0.0.zip ./*
       - cd ..
       - cp output/lambda-java-1.0.0.zip .
-      - aws lambda update-function-code --function-name lambda-java --zip-file fileb://target/lambda-java-1.0.0.jar
+      - aws lambda update-function-code --function-name lambda-java --zip-file fileb://target/lambda-java-1.0.0.jar &
+      - wait
       - LATEST_VERSION=$(aws lambda publish-version --function-name lambda-java --query 'Version' --output text)
       - aws lambda update-alias --function-name lambda-java --name live --function-version $LATEST_VERSION
 
