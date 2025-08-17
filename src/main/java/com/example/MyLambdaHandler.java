@@ -8,7 +8,7 @@ public class MyLambdaHandler  implements RequestHandler<String, String> {
 
     @Override
     public String handleRequest(String input, Context context) {
-        return "Hello: " + input;
+        return "Sup: " + input;
     }
 
 }
